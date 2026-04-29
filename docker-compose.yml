@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix  # GUI表示のための共有
+    environment:
+      - DISPLAY=${DISPLAY}             # Linuxの場合。Mac/Winは追加設定が必要
+    network_mode: "host"               # ローカルでの動作確認をスムーズに

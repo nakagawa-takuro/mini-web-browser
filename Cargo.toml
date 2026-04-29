@@ -1,0 +1,20 @@
+[package]
+name = "mini-browser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# ネットワーク（HTMLの取得用）
+reqwest = { version = "0.11", features = ["blocking"] }
+
+# HTMLの解析（DOMツリーの作成用）
+html5ever = "0.26"
+
+# ウィンドウ作成と描画（GUIの土台）
+winit = "0.29"
+
+tokio = { version = "1", features = ["full"] }
+
+# log出力（開発中のデバッグ用）
+env_logger = "0.10"
+log = "0.4"

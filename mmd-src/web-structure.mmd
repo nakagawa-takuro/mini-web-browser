@@ -1,0 +1,32 @@
+flowchart TD
+    %% ノードの定義
+    Start(( ))
+    HC[HTML ・ CSS]
+    CSSOM[CSSOM]
+    DOM[DOM]
+    RT[レンダリングツリー]
+    LR[レイアウト結果]
+    PR["ペイント結果（画像）"]
+    End(( ))
+
+    %% 接続とラベル
+    Start --> HC
+    HC -->|字句解析・構文解析など| CSSOM
+    HC -->|字句解析・構文解析など| DOM
+    CSSOM --> RT
+    DOM -->|スタイリング| RT
+    RT -->|レイアウト| LR
+    LR -->|ペイント| PR
+    PR --> End
+
+    %% スタイルの設定
+    style HC fill:#62b58e,stroke:#fff,color:#fff,font-weight:bold
+    style CSSOM fill:#62b58e,stroke:#fff,color:#fff,font-weight:bold
+    style DOM fill:#62b58e,stroke:#fff,color:#fff,font-weight:bold
+    style RT fill:#62b58e,stroke:#fff,color:#fff,font-weight:bold
+    style LR fill:#62b58e,stroke:#fff,color:#fff,font-weight:bold
+    style PR fill:#62b58e,stroke:#fff,color:#fff,font-weight:bold
+    
+    %% 開始・終了地点の透過設定
+    style Start fill:#ccc,stroke:none
+    style End fill:#ccc,stroke:none

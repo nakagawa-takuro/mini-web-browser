@@ -32,4 +32,4 @@
 
 ## 参考文献・サイト等
 
-[ちいさな Web ブラウザを作ってみよう](https://browserbook.shift-js.info/)
+- [ちいさな Web ブラウザを作ってみよう](https://browserbook.shift-js.info/)
